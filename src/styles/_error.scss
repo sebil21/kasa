@@ -1,0 +1,20 @@
+@import '_variables.scss';
+
+.error-container {
+  margin: 113px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 113px;
+  &__nbr {
+    @include errorNbr;
+  }
+  &__text {
+    @include errorText;
+  }
+  &__link {
+    @include errorLink;
+  }
+}
