@@ -1,0 +1,22 @@
+@import '_variables.scss';
+
+.footer-container {
+  background-color: $dark-background-color;
+  color: $secondary-color;
+  @include header-footer;
+  display: flex;
+  height: 209px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: 122px;
+  }
+  &__text {
+    display: flex;
+    width: 133.594px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+}

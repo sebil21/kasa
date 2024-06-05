@@ -1,4 +1,4 @@
-@import '_mixins.scss';
+@import '_variables.scss';
 
 .header-container {
   display: flex;
@@ -6,6 +6,7 @@
   justify-content: space-between;
   margin: 20px 20px 27px 20px;
   @include header-footer;
+  text-transform: uppercase;
   & img {
     width: 145px;
   }
@@ -15,5 +16,8 @@
   &__link {
     text-decoration: none;
     margin-left: 26px;
+  }
+  &__link:visited {
+    color: inherit;
   }
 }

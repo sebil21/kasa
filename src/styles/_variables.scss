@@ -1,0 +1,17 @@
+// VARIABLES
+$primary-color: #ff6060;
+$secondary-color: #ffffff;
+$light-background-color: #f6f6f6;
+$dark-background-color: #000000;
+
+// MIXINS
+
+@mixin header-footer {
+  font-size: 12px;
+  font-weight: 500;
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+    text-transform: none;
+  }
+}
