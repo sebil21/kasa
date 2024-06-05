@@ -1,0 +1,10 @@
+// MIXINS
+
+@mixin header-footer {
+  font-size: 12px;
+  font-weight: 500;
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
+}

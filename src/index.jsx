@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/main.css';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/main.scss';
 import Header from './components/Header';
+import Home from './pages/Home';
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
   <React.StrictMode>
     <Router>
       <Header />
+      {/* + footer */}
       <Routes>
-        <Route path="/Header" element={<Header />}></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
