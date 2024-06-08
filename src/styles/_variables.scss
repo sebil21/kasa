@@ -61,3 +61,21 @@ $dark-background-color: #000000;
     font-size: 1.125rem;
   }
 }
+
+@mixin collapseAboutTitle {
+  font-size: 0.813rem;
+  font-weight: 700;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin collapseDescription {
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem;
+  }
+}

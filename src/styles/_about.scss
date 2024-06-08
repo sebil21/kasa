@@ -1,0 +1,32 @@
+@import '_variables.scss';
+
+.collapse-container {
+  margin: 0 20px;
+  &__section {
+    margin-bottom: 20px;
+  }
+}
+
+.collapse-title {
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-radius: 5px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  & h3 {
+    @include collapseAboutTitle;
+  }
+}
+
+.collapse-text {
+  @include collapseDescription;
+  margin: 10px;
+}
+
+.icone {
+  //NE FONCTIONNE PAS
+  transition: transform 1s;
+}
