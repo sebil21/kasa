@@ -20,4 +20,7 @@
   &__link:visited {
     color: inherit;
   }
+  &__link:focus {
+    text-decoration: underline;
+  }
 }
