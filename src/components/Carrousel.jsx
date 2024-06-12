@@ -1,10 +1,9 @@
 import '../styles/_carrousel.scss';
 import { useState } from 'react';
-import { lodging } from '../datas/lodging';
 
-function Carrousel({ slides }) {
+function Carrousel({pictures}) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideLength = slides.length;
+  const slideLength = pictures.length;
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
@@ -13,16 +12,30 @@ function Carrousel({ slides }) {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
   };
 
-  return (
-    <div className="carrousel-container">
-      <i className="arrow-left fa-solid fa-angle-left" onClick={prevSlide}></i>
-      <i className="arrow-right fa-solid fa-angle-right" onClick={nextSlide}></i>
-      {lodging.map((index) => (
-        <div className="carrousel-img">
-          <img key={index.id} src={index.pictures} alt={index.title} />
-          </div>
-      ))}
-    </div>
-  )
+// return (
+//   <div className="carrousel-container">
+//       <i className="arrow arrow__left fa-solid fa-angle-left" onClick={prevSlide}></i>
+//       <i className="arrow arrow__right fa-solid fa-angle-right" onClick={nextSlide}></i>
+//     {pictures.map((index) => (
+//       <div>
+//         <img className="carrousel-img" key={index.id} src={index} alt={index.title} />
+//         </div>
+//     ))}
+//   </div>
+// )
+return (
+  <div className="carrousel-container">
+    <i className="arrow arrow__left fa-solid fa-angle-left" onClick={prevSlide}></i>
+    <i className="arrow arrow__right fa-solid fa-angle-right" onClick={nextSlide}></i>
+    {pictures.map((picture, index) => (
+      <div key={index} className={`carrousel-slide ${index === currentSlide ? 'active' : ''}`}>
+        <img className="carrousel-img" src={picture} alt={`Slide ${index}`} />
+      </div>
+    ))}
+    <div className="carrousel-counter">
+        {currentSlide + 1} / {slideLength}
+      </div>
+  </div>
+);
 }
 export default Carrousel;
