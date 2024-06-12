@@ -1,0 +1,17 @@
+@import '_variables.scss';
+
+.info-container {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-title {
+  @include lodgingTitle;
+  color: $primary-color;
+}
+
+.info-location {
+  @include lodgingLocation;
+}

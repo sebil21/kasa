@@ -1,5 +1,5 @@
-import AboutBanner from '../components/AboutBanner';
-import CollapseAboutPage from '../components/CollapseAboutPage';
+import AboutBanner from '../components/AboutBanner'
+import CollapseAboutPage from '../components/CollapseAboutPage'
 
 function About() {
   return (
@@ -7,7 +7,7 @@ function About() {
       <AboutBanner />
       <CollapseAboutPage />
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

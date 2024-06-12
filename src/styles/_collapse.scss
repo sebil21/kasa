@@ -2,8 +2,11 @@
 
 .collapse-container {
   margin: 0 20px;
+  display: flex;
+  flex-direction: column;
   &__section {
     margin-bottom: 20px;
+    max-height: 180px; /* Exemple de hauteur maximale */
   }
 }
 
@@ -26,7 +29,6 @@
   margin: 10px;
 }
 
-.icone {
-  //NE FONCTIONNE PAS
-  transition: transform 1s;
+.lodging-collapse {
+  margin: 0 20px 27px 20px;
 }
