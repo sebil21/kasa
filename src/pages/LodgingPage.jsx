@@ -7,6 +7,7 @@ import Tag from '../components/Tag'
 import Rate from '../components/Rate'
 import Host from '../components/Host'
 import Collapse from '../components/Collapse'
+import '../styles/_collapse.scss'
 
 function LodgingPage() {
   const { id } = useParams()
@@ -26,20 +27,20 @@ function LodgingPage() {
       />
       <Tag tags={currentLodging.tags} />
       <div className="wrap">
-        <Rate rate={currentLodging.rate} />
+        <Rate rating={currentLodging.rating} />
         <Host host={currentLodging.host} />
       </div>
       <div className="lodging-collapse">
         <Collapse
           props={{
-            aboutTitle: 'Description',
-            aboutText: currentLodging.description,
+            title: 'Description',
+            description: currentLodging.description,
           }}
         />
         <Collapse
           props={{
-            aboutTitle: 'Équipements',
-            aboutText: currentLodging.equipments,
+            title: 'Équipements',
+            description: currentLodging.equipments,
           }}
         />
       </div>

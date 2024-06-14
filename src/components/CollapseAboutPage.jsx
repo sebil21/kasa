@@ -1,6 +1,5 @@
 import { collapseAboutPage } from '../datas/collapseAboutPage.js'
 import '../styles/_collapse.scss'
-// import { useState } from 'react';
 import Collapse from './Collapse.jsx'
 
 function CollapseAbout() {

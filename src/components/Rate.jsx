@@ -1,13 +1,18 @@
 import '../styles/_rate.scss'
 
-function Rate() {
+function Rate({ rating }) {
   return (
     <div className="rate-container">
-      <i className="full-star fa-regular fa-star"></i>
-      <i class="empty-star fa-regular fa-star"></i>
-      <i class="empty-star fa-regular fa-star"></i>
-      <i class="empty-star fa-regular fa-star"></i>
-      <i class="empty-star fa-regular fa-star"></i>
+      {[1, 2, 3, 4, 5].map((index) => (
+        <i
+          key={index}
+          className={
+            index <= rating
+              ? 'full-star fa-solid fa-star'
+              : 'empty-star fa-solid fa-star'
+          }
+        ></i>
+      ))}
     </div>
   )
 }

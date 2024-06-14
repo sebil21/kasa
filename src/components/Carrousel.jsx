@@ -1,28 +1,16 @@
-import '../styles/_carrousel.scss';
-import { useState } from 'react';
+import '../styles/_carrousel.scss'
+import { useState } from 'react'
 
 function Carrousel({ pictures }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideLength = pictures.length;
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const slideLength = pictures.length
 
   const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
-  };
+    setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1)
+  }
   const nextSlide = () => {
-    setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
-  };
-
-  // return (
-  //   <div className="carrousel-container">
-  //       <i className="arrow arrow__left fa-solid fa-angle-left" onClick={prevSlide}></i>
-  //       <i className="arrow arrow__right fa-solid fa-angle-right" onClick={nextSlide}></i>
-  //     {pictures.map((index) => (
-  //       <div>
-  //         <img className="carrousel-img" key={index.id} src={index} alt={index.title} />
-  //         </div>
-  //     ))}
-  //   </div>
-  // )
+    setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1)
+  }
 
   return (
     <div className="carrousel-container">
@@ -48,6 +36,6 @@ function Carrousel({ pictures }) {
         {currentSlide + 1} / {slideLength}
       </div>
     </div>
-  );
+  )
 }
-export default Carrousel;
+export default Carrousel

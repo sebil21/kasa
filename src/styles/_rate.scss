@@ -3,4 +3,13 @@
 .rate-container {
   display: flex;
   align-items: flex-start;
+  gap: 5px;
+}
+
+.full-star {
+  color: $primary-color;
+}
+
+.empty-star {
+  color: #e3e3e3;
 }
