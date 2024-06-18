@@ -1,5 +1,5 @@
-import HomeBanner from '../components/HomeBanner';
-import Cards from '../components/Cards';
+import HomeBanner from '../components/HomeBanner'
+import Cards from '../components/Cards'
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       <HomeBanner />
       <Cards />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

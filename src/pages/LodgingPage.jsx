@@ -21,16 +21,20 @@ function LodgingPage() {
   return (
     <div>
       <Carrousel pictures={currentLodging.pictures} />
-      <LodgingInfo
-        title={currentLodging.title}
-        location={currentLodging.location}
-      />
-      <Tag tags={currentLodging.tags} />
-      <div className="wrap">
-        <Rate rating={currentLodging.rating} />
-        <Host host={currentLodging.host} />
+      <div className="title-container">
+        <div>
+          <LodgingInfo
+            title={currentLodging.title}
+            location={currentLodging.location}
+          />
+          <Tag tags={currentLodging.tags} />
+        </div>
+        <div className="wrap">
+          <Rate rating={currentLodging.rating} />
+          <Host host={currentLodging.host} />
+        </div>
       </div>
-      <div className="lodging-collapse">
+      <div id="lodging-collapse">
         <Collapse
           props={{
             title: 'Description',

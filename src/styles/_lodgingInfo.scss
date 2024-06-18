@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  // width: 100%;
 }
 
 .info-title {
@@ -14,4 +15,21 @@
 
 .info-location {
   @include lodgingLocation;
+}
+
+@media screen and (min-width: 1024px) {
+  .info-container {
+    margin: 30px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // width: 100%;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
 }

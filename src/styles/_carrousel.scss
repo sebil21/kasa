@@ -3,6 +3,7 @@
 .carrousel-container {
   margin: 0 20px 15px 20px;
   position: relative;
+  // width: 100%;
 }
 
 .carrousel-slide {
@@ -40,8 +41,23 @@
 .carrousel-counter {
   display: none;
   position: absolute;
-  bottom: 5%;
-  right: 45%;
+  bottom: 8%;
+  right: 50%;
   color: $secondary-color;
   font-size: 1.125rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .carrousel-container {
+    margin: 50px 90px;
+  }
+  .carrousel-img {
+    height: 415px;
+  }
+  .carrousel-counter {
+    display: flex;
+  }
+  .arrow {
+    font-size: 47px;
+  }
 }

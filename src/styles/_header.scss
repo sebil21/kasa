@@ -6,6 +6,7 @@
   justify-content: space-between;
   margin: 20px 20px 27px 20px;
   @include header-footer;
+  // width: 100%;
   text-transform: uppercase;
   & img {
     width: 145px;
@@ -15,12 +16,28 @@
 .header-nav {
   &__link {
     text-decoration: none;
-    margin-left: 26px;
+    @include header-footer;
+    margin-left: 25px;
   }
   &__link:visited {
     color: inherit;
   }
   &__link:focus {
     text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-container {
+    margin: 45px 90px;
+    & img {
+      width: 210px;
+    }
+  }
+
+  .header-nav {
+    &__link {
+      margin-left: 57px;
+    }
   }
 }

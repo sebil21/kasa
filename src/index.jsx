@@ -1,16 +1,16 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/main.scss';
-import Header from './components/Header';
-import Home from './pages/Home';
-import LodgingPage from './pages/LodgingPage';
-import About from './pages/About';
-import Footer from './components/Footer';
-import Error from './components/Error';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './styles/main.scss'
+import Header from './components/Header'
+import Home from './pages/Home'
+import LodgingPage from './pages/LodgingPage'
+import About from './pages/About'
+import Footer from './components/Footer'
+import Error from './components/Error'
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
+const rootElement = document.getElementById('root')
+const root = createRoot(rootElement)
 
 root.render(
   <React.StrictMode>
@@ -25,4 +25,4 @@ root.render(
       <Footer />
     </Router>
   </React.StrictMode>
-);
+)
