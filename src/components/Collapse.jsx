@@ -13,7 +13,12 @@ function Collapse({ props }) {
           className={`icone fa-solid fa-angle-${isOpen ? 'down' : 'up'}`}
         ></i>
       </div>
-      {isOpen && <p className="collapse-text">{props.description}</p>}
+      <p className={`collapse-text ${isOpen ? 'open' : ''}`}>
+        {/* {props.description} */}
+        {Array.isArray(props.description)
+          ? props.description.map((equip) => <span>{equip}</span>)
+          : props.description}
+      </p>
     </div>
   )
 }
