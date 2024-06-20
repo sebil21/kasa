@@ -40,12 +40,12 @@
   .lodging {
     flex-direction: row;
     margin: 43px 90px;
-    // width: 100%;
     background-color: $light-background-color;
     border-radius: 25px;
     align-items: center;
     justify-content: space-between;
-    padding: 55px;
+    padding: 50px;
+    row-gap: 50px;
     &__card {
       flex-direction: row;
       width: 100%;
