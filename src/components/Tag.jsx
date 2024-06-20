@@ -1,4 +1,4 @@
-import '../styles/_tags.scss';
+import '../styles/_tags.scss'
 
 function Tag({ tags }) {
   return (
@@ -9,7 +9,7 @@ function Tag({ tags }) {
         </p>
       ))}
     </div>
-  );
+  )
 }
 
-export default Tag;
+export default Tag

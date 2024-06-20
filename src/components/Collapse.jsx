@@ -14,9 +14,10 @@ function Collapse({ props }) {
         ></i>
       </div>
       <p className={`collapse-text ${isOpen ? 'open' : ''}`}>
-        {/* {props.description} */}
         {Array.isArray(props.description)
-          ? props.description.map((equip) => <span>{equip}</span>)
+          ? props.description.map((equip, index) => (
+              <span key={index}>{equip}</span>
+            ))
           : props.description}
       </p>
     </div>
