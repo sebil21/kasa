@@ -14,14 +14,18 @@ function Carrousel({ pictures }) {
 
   return (
     <div className="carrousel-container">
-      <i
-        className="arrow arrow__left fa-solid fa-angle-left"
-        onClick={prevSlide}
-      ></i>
-      <i
-        className="arrow arrow__right fa-solid fa-angle-right"
-        onClick={nextSlide}
-      ></i>
+      {slideLength > 1 && (
+        <i
+          className="arrow arrow__left fa-solid fa-angle-left"
+          onClick={prevSlide}
+        ></i>
+      )}
+      {slideLength > 1 && (
+        <i
+          className="arrow arrow__right fa-solid fa-angle-right"
+          onClick={nextSlide}
+        ></i>
+      )}
       {pictures.map((picture, index) => (
         <div
           key={index}
